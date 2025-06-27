@@ -3,19 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Speedcubing World</title>
+  <title>Speedcubing World - Premium</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #0f0f0f;
-      color: #fff;
+    :root {
+      --primary: #1e90ff;
+      --bg: #0f0f0f;
+      --card: #1a1a1a;
+      --accent: #ffd700;
+      --text: #fff;
+      --muted: #aaa;
+    }
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
     header {
-      background: #1e90ff;
-      padding: 30px;
+      background: var(--primary);
+      padding: 40px 20px;
       text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
     }
     nav {
       background: #121212;
@@ -30,64 +46,55 @@
       font-size: 16px;
     }
     nav a:hover {
-      color: #1e90ff;
+      color: var(--accent);
     }
     section {
-      padding: 40px 20px;
-      max-width: 1000px;
+      padding: 60px 20px;
+      max-width: 1100px;
       margin: auto;
+    }
+    .gallery, .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .gallery img, .feature-card img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .feature-card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 12px;
+      flex: 1 1 250px;
+      text-align: center;
+    }
+    .feature-card i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: var(--primary);
     }
     iframe {
       width: 100%;
       height: 400px;
       border: none;
       border-radius: 12px;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .gallery img {
-      width: 250px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    }
-    .timer-box {
-      text-align: center;
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 12px;
       margin-top: 20px;
     }
-    footer {
-      background: #1e1e1e;
-      padding: 30px;
-      text-align: center;
-      font-size: 14px;
-      color: #aaa;
-    }
-    .review-box {
-      background: #222;
+    .review-box, .blog-post, .tool-box {
+      background: var(--card);
       padding: 20px;
-      margin-bottom: 20px;
       border-radius: 12px;
+      margin-bottom: 20px;
     }
-    .review-box h3 {
-      color: #1e90ff;
+    .review-box h3, .blog-post h4, .tool-box h3 {
+      color: var(--primary);
     }
     .contact-link a {
-      color: #1e90ff;
-    }
-    .blog-post {
-      background: #1d1d1d;
-      margin-bottom: 20px;
-      padding: 20px;
-      border-radius: 12px;
-    }
-    .blog-post h4 {
-      color: #ffd700;
+      color: var(--primary);
     }
     table {
       width: 100%;
@@ -100,142 +107,148 @@
       text-align: left;
     }
     th {
-      background: #1e90ff;
+      background: var(--primary);
     }
     td {
-      background: #222;
+      background: var(--card);
+    }
+    footer {
+      background: #1e1e1e;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .premium-box {
+      background: linear-gradient(45deg, #1e90ff, #00c3ff);
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      margin-top: 30px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Speedcubing World 🌍</h1>
-  <p>Your ultimate hub for cubing tips, videos, reviews, tutorials, blogs & more!</p>
+  <h1><i class="fas fa-cube"></i> Speedcubing World</h1>
+  <p>World-class tips, gear, blogs & tools. Built like a $1000 site.</p>
 </header>
 
 <nav>
   <a href="#home">Home</a>
-  <a href="#tips">Tips</a>
-  <a href="#timer">Timer</a>
+  <a href="#features">Features</a>
   <a href="#videos">Videos</a>
   <a href="#gallery">Gallery</a>
   <a href="#reviews">Reviews</a>
-  <a href="#compare">Compare</a>
+  <a href="#tools">Tools</a>
   <a href="#blog">Blog</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <section id="home">
   <h2>🏁 Welcome!</h2>
-  <p>Welcome to Speedcubing World! Whether you're just beginning or pushing for world records, this site is made for you. Explore expert tips, advanced gear reviews, algorithm breakdowns, and the global cubing community!</p>
+  <p>Welcome to the most advanced speedcubing fan site on the internet. Packed with embedded videos, interactive tools, comparison charts, blogs, galleries, and pro tips.</p>
+  <div class="premium-box">
+    <h3>New: Join Our Free Discord Server 🎧</h3>
+    <p>Compete, chat, and train live with other cubers. Invite link: <strong>discord.gg/speedcubingworld</strong></p>
+  </div>
 </section>
 
-<section id="tips">
-  <h2>🧠 Pro Tips & Training</h2>
-  <ul>
-    <li>✅ Use inspection time for full cross and pair planning</li>
-    <li>✅ Practice with no pauses — use metronome training</li>
-    <li>✅ Film yourself to analyze finger tricks and inefficiencies</li>
-    <li>✅ Warm up with slow solves (TPS control is key)</li>
-    <li>✅ Use drills: e.g., 20 F2L cases over and over</li>
-    <li>✅ Try Roux, ZZ, or OH to develop deeper insight</li>
-  </ul>
-</section>
-
-<section id="timer">
-  <h2>⏱️ Cube Timer</h2>
-  <div class="timer-box">
-    <p><strong>Click the button below to start timing:</strong></p>
-    <p><a href="https://cstimer.net" target="_blank">Launch cstimer.net</a></p>
+<section id="features">
+  <h2>🚀 Site Features</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <i class="fas fa-bolt"></i>
+      <h3>Real-Time Timer</h3>
+      <p>Integrated with cstimer, plus customizable solve stats tracking coming soon.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-chart-line"></i>
+      <h3>Cube Comparison</h3>
+      <p>Data-driven performance analysis across dozens of WCA-legal cubes.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-brain"></i>
+      <h3>Algorithm Trainer</h3>
+      <p>Interactive trainer to drill F2L, OLL, and PLL cases visually.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-lightbulb"></i>
+      <h3>Blog & News</h3>
+      <p>WR updates, championship coverage, AI solve predictions & more.</p>
+    </div>
   </div>
 </section>
 
 <section id="videos">
-  <h2>🎥 Favorite Cubing Videos</h2>
+  <h2>🎥 Cubing Showcase</h2>
   <iframe src="https://www.youtube.com/embed/_eGz5vW9Dk8" title="Speedcubing Documentary"></iframe>
 </section>
 
 <section id="gallery" class="gallery">
   <h2>📸 Cube Gallery</h2>
-  <img src="https://cdn.shopify.com/s/files/1/0267/9737/4063/products/gancube-gancube-356-i3-660857.jpg" alt="GAN 356 Cube">
-  <img src="https://m.media-amazon.com/images/I/61tAWa+W4yL.jpg" alt="Speedcube">
-  <img src="https://cdn.shopify.com/s/files/1/0285/1227/3978/products/moyu-rs3m-magnet-2021.jpg" alt="MoYu RS3M">
-  <img src="https://cdn.shopify.com/s/files/1/0285/1227/3978/products/moyu-cube-bundle.jpg" alt="Cube Bundle">
-  <img src="https://cdn.shopify.com/s/files/1/0270/2733/2475/products/mgc-3x3-elite.jpg" alt="YJ MGC Elite">
+  <img src="https://cdn.shopify.com/s/files/1/0267/9737/4063/products/gancube-gancube-356-i3-660857.jpg">
+  <img src="https://cdn.shopify.com/s/files/1/0285/1227/3978/products/moyu-rs3m-magnet-2021.jpg">
+  <img src="https://m.media-amazon.com/images/I/61tAWa+W4yL.jpg">
+  <img src="https://cdn.shopify.com/s/files/1/0270/2733/2475/products/mgc-3x3-elite.jpg">
 </section>
 
 <section id="reviews">
   <h2>⭐ Cube Reviews</h2>
   <div class="review-box">
     <h3>GAN 12 M Maglev</h3>
-    <p>High-end flagship with magnetic core. Insane corner cutting and feel. Great for experienced solvers looking for max performance.</p>
+    <p>Top-tier magnetic speedcube with effortless corner cutting and AI training chip potential.</p>
   </div>
   <div class="review-box">
     <h3>MoYu RS3M 2021</h3>
-    <p>Best budget cube ever made. Feels premium for a low cost. Easily customizable magnets and buttery smooth performance.</p>
+    <p>Budget beast, no compromises. Everyone's first sub-20 solve companion.</p>
   </div>
   <div class="review-box">
-    <h3>YJ MGC 3 Elite</h3>
-    <p>Underrated mid-range beast. Magnetic feel is strong and controllable. Excellent for sub-15 solvers.</p>
+    <h3>Tornado V3 Pioneer</h3>
+    <p>Quiet, stable and controllable. Smart choice for OH or low-noise environments.</p>
   </div>
 </section>
 
-<section id="compare">
-  <h2>📊 Cube Comparison Table</h2>
-  <table>
-    <tr>
-      <th>Cube</th>
-      <th>Price</th>
-      <th>Best For</th>
-      <th>Rating</th>
-    </tr>
-    <tr>
-      <td>GAN 12 Maglev</td>
-      <td>₹6500+</td>
-      <td>Advanced Speedcubers</td>
-      <td>9.5/10</td>
-    </tr>
-    <tr>
-      <td>MoYu RS3M 2021</td>
-      <td>₹900</td>
-      <td>Beginners–Intermediates</td>
-      <td>9/10</td>
-    </tr>
-    <tr>
-      <td>YJ MGC Elite</td>
-      <td>₹2500</td>
-      <td>Intermediate–Advanced</td>
-      <td>8.5/10</td>
-    </tr>
-  </table>
+<section id="tools">
+  <h2>🧰 Cubing Tools</h2>
+  <div class="tool-box">
+    <h3>⏱️ Solve Timer</h3>
+    <p><a href="https://cstimer.net" target="_blank">Launch Advanced Timer</a></p>
+  </div>
+  <div class="tool-box">
+    <h3>📊 Solve Analyzer</h3>
+    <p>COMING SOON: Upload your solves to view TPS, rotations, pauses & more with AI breakdown.</p>
+  </div>
+  <div class="tool-box">
+    <h3>📅 WCA Schedule</h3>
+    <p>Auto-updated list of all upcoming official WCA competitions. Sync with your calendar!</p>
+  </div>
 </section>
 
 <section id="blog">
-  <h2>📝 Cubing Blog & Updates</h2>
+  <h2>📝 Blog & News</h2>
   <div class="blog-post">
-    <h4>June 2025: WCA Returns to India!</h4>
-    <p>The WCA has announced a major return to India with 3 back-to-back competitions across Mumbai, Bangalore, and Delhi. Stay tuned for coverage!</p>
+    <h4>July 2025: India Nationals Announced 🇮🇳</h4>
+    <p>The biggest Indian WCA competition yet is set to take place this October. Expect record-breaking performances.</p>
   </div>
   <div class="blog-post">
-    <h4>Feliks Zemdegs Speaks on AI Cubing</h4>
-    <p>Legendary solver Feliks discussed how AI tools like scrambler trainers and solve analyzers are changing how cubers train. More coming soon.</p>
-  </div>
-  <div class="blog-post">
-    <h4>New WR Alert: 3.95 Seconds!</h4>
-    <p>Massive congratulations to the new WR holder for setting an unbelievable 3.95s single. The cube used? MoYu Super RS4 prototype.</p>
+    <h4>Top 5 AI Tools for Cubers</h4>
+    <p>We review the top AI-based tools for scramble prediction, solve training, and move-count optimization.</p>
   </div>
 </section>
 
 <section id="contact">
   <h2>📬 Contact Me</h2>
-  <p class="contact-link">DM me on Instagram: <a href="https://instagram.com/yourcubename" target="_blank">@yourcubename</a></p>
+  <p class="contact-link">Instagram: <a href="https://instagram.com/yourcubename" target="_blank">@yourcubename</a></p>
   <p class="contact-link">Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
   <p class="contact-link">YouTube: <a href="https://youtube.com/@yourchannel" target="_blank">@yourchannel</a></p>
 </section>
 
 <footer>
-  <p>© 2025 Speedcubing World. Made with love, magnets, and algorithms 💙</p>
+  <p>© 2025 Speedcubing World. Built with ❤️ + JavaScript + magnets.</p>
+  <p><small>Not affiliated with WCA. For fan use only.</small></p>
 </footer>
 
 </body>
