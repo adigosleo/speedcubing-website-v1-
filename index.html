@@ -1,49 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Speedcubing World</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
       margin: 0;
       padding: 0;
     }
     header {
       background: #1e90ff;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
     }
     nav {
-      background: #333;
-      padding: 10px;
+      background: #121212;
+      padding: 15px;
       text-align: center;
     }
     nav a {
       color: white;
-      margin: 10px;
+      margin: 15px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
+    }
+    nav a:hover {
+      color: #1e90ff;
     }
     section {
-      padding: 20px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
     iframe {
       width: 100%;
-      height: 315px;
+      height: 400px;
       border: none;
+      border-radius: 12px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
     .gallery img {
-      width: 200px;
-      margin: 10px;
-      border-radius: 10px;
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .timer-box {
+      text-align: center;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
     }
     footer {
-      background: #222;
-      padding: 20px;
+      background: #1e1e1e;
+      padding: 30px;
       text-align: center;
       font-size: 14px;
+      color: #aaa;
+    }
+    .review-box {
+      background: #222;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+    }
+    .review-box h3 {
+      color: #1e90ff;
+    }
+    .contact-link a {
+      color: #1e90ff;
+    }
+    .blog-post {
+      background: #1d1d1d;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    .blog-post h4 {
+      color: #ffd700;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #1e90ff;
+    }
+    td {
+      background: #222;
     }
   </style>
 </head>
@@ -51,51 +111,131 @@
 
 <header>
   <h1>Speedcubing World 🌍</h1>
-  <p>Welcome to the cube life!</p>
+  <p>Your ultimate hub for cubing tips, videos, reviews, tutorials, blogs & more!</p>
 </header>
 
 <nav>
   <a href="#home">Home</a>
   <a href="#tips">Tips</a>
+  <a href="#timer">Timer</a>
   <a href="#videos">Videos</a>
   <a href="#gallery">Gallery</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#compare">Compare</a>
+  <a href="#blog">Blog</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <section id="home">
-  <h2>Welcome!</h2>
-  <p>Hey! I'm a cuber who loves solving fast. This website is my cubing corner—explore and join the journey!</p>
+  <h2>🏁 Welcome!</h2>
+  <p>Welcome to Speedcubing World! Whether you're just beginning or pushing for world records, this site is made for you. Explore expert tips, advanced gear reviews, algorithm breakdowns, and the global cubing community!</p>
 </section>
 
 <section id="tips">
-  <h2>🧠 Solving Tips</h2>
+  <h2>🧠 Pro Tips & Training</h2>
   <ul>
-    <li>Learn 2-Look OLL and PLL</li>
-    <li>Practice finger tricks with fewer pauses</li>
-    <li>Use inspection time wisely (15 seconds!)</li>
-    <li>Track solves and time yourself with <a href="https://cstimer.net" target="_blank">cstimer.net</a></li>
+    <li>✅ Use inspection time for full cross and pair planning</li>
+    <li>✅ Practice with no pauses — use metronome training</li>
+    <li>✅ Film yourself to analyze finger tricks and inefficiencies</li>
+    <li>✅ Warm up with slow solves (TPS control is key)</li>
+    <li>✅ Use drills: e.g., 20 F2L cases over and over</li>
+    <li>✅ Try Roux, ZZ, or OH to develop deeper insight</li>
   </ul>
 </section>
 
+<section id="timer">
+  <h2>⏱️ Cube Timer</h2>
+  <div class="timer-box">
+    <p><strong>Click the button below to start timing:</strong></p>
+    <p><a href="https://cstimer.net" target="_blank">Launch cstimer.net</a></p>
+  </div>
+</section>
+
 <section id="videos">
-  <h2>🎥 Cool Videos</h2>
+  <h2>🎥 Favorite Cubing Videos</h2>
   <iframe src="https://www.youtube.com/embed/_eGz5vW9Dk8" title="Speedcubing Documentary"></iframe>
 </section>
 
 <section id="gallery" class="gallery">
   <h2>📸 Cube Gallery</h2>
-  <img src="https://cdn.shopify.com/s/files/1/0267/9737/4063/products/gancube-gancube-356-i3-660857.jpg" alt="Cube">
-  <img src="https://m.media-amazon.com/images/I/61tAWa+W4yL.jpg" alt="Cube">
+  <img src="https://cdn.shopify.com/s/files/1/0267/9737/4063/products/gancube-gancube-356-i3-660857.jpg" alt="GAN 356 Cube">
+  <img src="https://m.media-amazon.com/images/I/61tAWa+W4yL.jpg" alt="Speedcube">
+  <img src="https://cdn.shopify.com/s/files/1/0285/1227/3978/products/moyu-rs3m-magnet-2021.jpg" alt="MoYu RS3M">
+  <img src="https://cdn.shopify.com/s/files/1/0285/1227/3978/products/moyu-cube-bundle.jpg" alt="Cube Bundle">
+  <img src="https://cdn.shopify.com/s/files/1/0270/2733/2475/products/mgc-3x3-elite.jpg" alt="YJ MGC Elite">
+</section>
+
+<section id="reviews">
+  <h2>⭐ Cube Reviews</h2>
+  <div class="review-box">
+    <h3>GAN 12 M Maglev</h3>
+    <p>High-end flagship with magnetic core. Insane corner cutting and feel. Great for experienced solvers looking for max performance.</p>
+  </div>
+  <div class="review-box">
+    <h3>MoYu RS3M 2021</h3>
+    <p>Best budget cube ever made. Feels premium for a low cost. Easily customizable magnets and buttery smooth performance.</p>
+  </div>
+  <div class="review-box">
+    <h3>YJ MGC 3 Elite</h3>
+    <p>Underrated mid-range beast. Magnetic feel is strong and controllable. Excellent for sub-15 solvers.</p>
+  </div>
+</section>
+
+<section id="compare">
+  <h2>📊 Cube Comparison Table</h2>
+  <table>
+    <tr>
+      <th>Cube</th>
+      <th>Price</th>
+      <th>Best For</th>
+      <th>Rating</th>
+    </tr>
+    <tr>
+      <td>GAN 12 Maglev</td>
+      <td>₹6500+</td>
+      <td>Advanced Speedcubers</td>
+      <td>9.5/10</td>
+    </tr>
+    <tr>
+      <td>MoYu RS3M 2021</td>
+      <td>₹900</td>
+      <td>Beginners–Intermediates</td>
+      <td>9/10</td>
+    </tr>
+    <tr>
+      <td>YJ MGC Elite</td>
+      <td>₹2500</td>
+      <td>Intermediate–Advanced</td>
+      <td>8.5/10</td>
+    </tr>
+  </table>
+</section>
+
+<section id="blog">
+  <h2>📝 Cubing Blog & Updates</h2>
+  <div class="blog-post">
+    <h4>June 2025: WCA Returns to India!</h4>
+    <p>The WCA has announced a major return to India with 3 back-to-back competitions across Mumbai, Bangalore, and Delhi. Stay tuned for coverage!</p>
+  </div>
+  <div class="blog-post">
+    <h4>Feliks Zemdegs Speaks on AI Cubing</h4>
+    <p>Legendary solver Feliks discussed how AI tools like scrambler trainers and solve analyzers are changing how cubers train. More coming soon.</p>
+  </div>
+  <div class="blog-post">
+    <h4>New WR Alert: 3.95 Seconds!</h4>
+    <p>Massive congratulations to the new WR holder for setting an unbelievable 3.95s single. The cube used? MoYu Super RS4 prototype.</p>
+  </div>
 </section>
 
 <section id="contact">
   <h2>📬 Contact Me</h2>
-  <p>DM me on Instagram: <strong>@yourcubename</strong></p>
-  <p>Or email me at: <strong>youremail@example.com</strong></p>
+  <p class="contact-link">DM me on Instagram: <a href="https://instagram.com/yourcubename" target="_blank">@yourcubename</a></p>
+  <p class="contact-link">Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+  <p class="contact-link">YouTube: <a href="https://youtube.com/@yourchannel" target="_blank">@yourchannel</a></p>
 </section>
 
 <footer>
-  <p>© 2025 Speedcubing World by Me. Made with 💙 and algorithms.</p>
+  <p>© 2025 Speedcubing World. Made with love, magnets, and algorithms 💙</p>
 </footer>
 
 </body>
