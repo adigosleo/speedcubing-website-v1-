@@ -3,80 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Speedcubing World - Premium</title>
+  <title>Rubik's Realm</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #1e90ff;
-      --bg: #0f0f0f;
-      --card: #1a1a1a;
-      --accent: #ffd700;
-      --text: #fff;
-      --muted: #aaa;
+      --red: #d62828;
+      --blue: #0077b6;
+      --yellow: #fcbf49;
+      --green: #43aa8b;
+      --white: #ffffff;
+      --orange: #f77f00;
+      --black: #0f0f0f;
     }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: 'Rubik', sans-serif;
+      background: var(--black);
+      color: var(--white);
       line-height: 1.6;
     }
+
     header {
-      background: var(--primary);
+      background: linear-gradient(90deg, var(--red), var(--blue), var(--green), var(--yellow), var(--orange));
       padding: 40px 20px;
       text-align: center;
     }
+
     header h1 {
       font-size: 3rem;
+      color: var(--white);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
+
     nav {
-      background: #121212;
+      background: #111;
       padding: 15px;
       text-align: center;
     }
+
     nav a {
-      color: white;
+      color: var(--white);
       margin: 15px;
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
     }
+
     nav a:hover {
-      color: var(--accent);
+      color: var(--yellow);
     }
+
     section {
       padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
     }
+
     .gallery, .feature-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
+
     .gallery img, .feature-card img {
       width: 100%;
       max-width: 300px;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0,0,0,0.5);
     }
+
     .feature-card {
-      background: var(--card);
+      background: #1c1c1c;
       padding: 20px;
       border-radius: 12px;
       flex: 1 1 250px;
       text-align: center;
     }
+
     .feature-card i {
       font-size: 40px;
       margin-bottom: 15px;
-      color: var(--primary);
+      color: var(--green);
     }
+
     iframe {
       width: 100%;
       height: 400px;
@@ -84,51 +103,53 @@
       border-radius: 12px;
       margin-top: 20px;
     }
-    .review-box, .blog-post, .tool-box {
-      background: var(--card);
+
+    .review-box, .blog-post, .tool-box, .tourney-box {
+      background: #1f1f1f;
       padding: 20px;
       border-radius: 12px;
       margin-bottom: 20px;
     }
-    .review-box h3, .blog-post h4, .tool-box h3 {
-      color: var(--primary);
+
+    .review-box h3, .blog-post h4, .tool-box h3, .tourney-box h3 {
+      color: var(--yellow);
     }
+
     .contact-link a {
-      color: var(--primary);
+      color: var(--blue);
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
     }
+
     th, td {
       border: 1px solid #555;
       padding: 10px;
       text-align: left;
     }
+
     th {
-      background: var(--primary);
+      background: var(--red);
     }
+
     td {
-      background: var(--card);
+      background: #222;
     }
+
     footer {
       background: #1e1e1e;
       padding: 40px 20px;
       text-align: center;
       font-size: 14px;
-      color: var(--muted);
+      color: #ccc;
     }
-    .premium-box {
-      background: linear-gradient(45deg, #1e90ff, #00c3ff);
-      color: white;
-      padding: 30px;
-      border-radius: 12px;
-      margin-top: 30px;
-      text-align: center;
-    }
-    .blog-post p {
-      text-align: justify;
+
+    .logo {
+      font-size: 2rem;
+      color: var(--yellow);
       margin-bottom: 10px;
     }
   </style>
@@ -136,73 +157,96 @@
 <body>
 
 <header>
-  <h1><i class="fas fa-cube"></i> Speedcubing World</h1>
-  <p>World-class tips, gear, blogs & tools. Built like a $1000 site.</p>
+  <div class="logo"><i class="fas fa-cube"></i> Rubik's Realm</div>
+  <h1>Welcome to the Ultimate Speedcubing Hub</h1>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#features">Features</a>
   <a href="#videos">Videos</a>
-  <a href="#gallery">Gallery</a>
+  <a href="#timer">Timer</a>
   <a href="#reviews">Reviews</a>
-  <a href="#tools">Tools</a>
+  <a href="#gallery">Gallery</a>
   <a href="#blog">Blog</a>
+  <a href="#tools">Tools</a>
+  <a href="#tournaments">Tournaments</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="home">
-  <h2>🏁 Welcome!</h2>
-  <p>Welcome to the most advanced speedcubing fan site on the internet. Packed with embedded videos, interactive tools, comparison charts, blogs, galleries, and pro tips.</p>
-  <div class="premium-box">
-    <h3>New: Join Our Free Discord Server 🎧</h3>
-    <p>Compete, chat, and train live with other cubers. Invite link: <strong>discord.gg/speedcubingworld</strong></p>
+<section id="videos">
+  <h2>🎥 Top Cubing Videos</h2>
+  <iframe src="https://www.youtube.com/embed/_eGz5vW9Dk8" title="Speedcubing Documentary"></iframe>
+  <iframe src="https://www.youtube.com/embed/g4A7fsKzVE8" title="How Fast Can You Get?"></iframe>
+</section>
+
+<section id="timer">
+  <h2>⏱️ Practice Timer</h2>
+  <div class="tool-box">
+    <p>Use our preferred external timer for your solves:</p>
+    <p><a href="https://cstimer.net" target="_blank">Launch cstimer.net</a></p>
   </div>
+</section>
+
+<section id="reviews">
+  <h2>⭐ Cube Reviews</h2>
+  <div class="review-box">
+    <h3>GAN 14 Maglev</h3>
+    <p>The pinnacle of engineering. Featherlight turns, magnetic precision, and customizability make this a top-tier flagship.</p>
+  </div>
+  <div class="review-box">
+    <h3>MoYu Super RS3M</h3>
+    <p>The ultimate value cube with flagship-level performance. Great for sub-20 solvers.</p>
+  </div>
+</section>
+
+<section id="gallery" class="gallery">
+  <h2>📸 Cube Gallery</h2>
+  <img src="https://cdn.shopify.com/s/files/1/0267/9737/4063/products/gancube-gancube-356-i3-660857.jpg">
+  <img src="https://cdn.shopify.com/s/files/1/0285/1227/3978/products/moyu-rs3m-magnet-2021.jpg">
+  <img src="https://m.media-amazon.com/images/I/61tAWa+W4yL.jpg">
 </section>
 
 <section id="blog">
-  <h2>📝 Blog & News</h2>
-
-  <!-- Repeating 30 high-quality blog posts to fill out 1000+ lines -->
-  <!-- Begin auto-generated blog section -->
-  <!-- (Lines intentionally extended for richness and length) -->
+  <h2>📝 Latest Blog Posts</h2>
   <div class="blog-post">
-    <h4>1. Why Finger Tricks Matter More Than TPS</h4>
-    <p>Many cubers obsess over turning speed (TPS), but the real trick to consistent fast solves lies in smooth, optimized finger tricks. In this blog, we break down the ergonomic secrets behind moves like R U R' U' and how advanced cubers reduce lockups through muscle memory, not raw speed.</p>
-    <p>We also analyze hand positioning from pros like Max Park and Feliks Zemdegs and how their efficiency compensates for TPS when under pressure. Finger tricks are the silent skill you need to master for long-term progress.</p>
+    <h4>How AI Is Changing Speedcubing</h4>
+    <p>AI now helps cubers analyze solves, recommend scrambles, and even coach you live. Learn what’s coming next.</p>
   </div>
-
   <div class="blog-post">
-    <h4>2. Best Lubes in the Market: Speed vs Control</h4>
-    <p>The right lube changes everything. Speed lubes like DNM-37 give cubes an instant glide, while control lubes like Weight 5 provide stability for better transitions. We compare lubes from TheCubicle, Angstrom, and Cubicle Labs to help you find the perfect balance for your cube type and solving style.</p>
-    <p>This blog also includes DIY tips, how to lube without disassembling your cube, and when to relube during competition season.</p>
+    <h4>3x3 vs 4x4 – Which Should You Master First?</h4>
+    <p>We break down the pros and cons of starting with larger cubes and what skills carry over between events.</p>
   </div>
+</section>
 
-  <!-- Simulate 28 more blogs similarly structured for size -->
-  <!-- Just displaying next one as a placeholder -->
-  <!-- You can repeat the pattern to expand as needed -->
-
-  <div class="blog-post">
-    <h4>3. Behind the World Record: Solving Under Pressure</h4>
-    <p>Breaking the world record isn't just about speed — it's about psychology. In this blog, we explore how nerves, crowd energy, and even camera presence affect a solver’s state of mind. We interview real competitors and analyze what separates the top 0.01% from the rest.</p>
-    <p>Plus, get exclusive insight into pre-competition routines, music playlists used by elite cubers, and breathing exercises that improve focus under time stress.</p>
+<section id="tools">
+  <h2>🧰 Cubing Tools</h2>
+  <div class="tool-box">
+    <h3>Case Trainer</h3>
+    <p>Practice your F2L, OLL, and PLL cases with interactive scrambles. COMING SOON.</p>
   </div>
+</section>
 
-  <!-- Repeat more here up to 1000 lines as requested -->
-  <!-- Final site will have over 1000+ HTML lines -->
-
+<section id="tournaments">
+  <h2>📆 Upcoming Competitions</h2>
+  <div class="tourney-box">
+    <h3>India Nationals – October 2025</h3>
+    <p>Location: Mumbai, India</p>
+    <p>Events: 3x3, OH, 4x4, 2x2, Pyraminx, Skewb, Blindfold</p>
+  </div>
+  <div class="tourney-box">
+    <h3>World Championships – July 2026</h3>
+    <p>Location: Tokyo, Japan</p>
+    <p>Biggest event of the decade with all 17 WCA categories. Expect fireworks and WRs!</p>
+  </div>
 </section>
 
 <section id="contact">
-  <h2>📬 Contact Me</h2>
-  <p class="contact-link">Instagram: <a href="https://instagram.com/yourcubename" target="_blank">@yourcubename</a></p>
-  <p class="contact-link">Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-  <p class="contact-link">YouTube: <a href="https://youtube.com/@yourchannel" target="_blank">@yourchannel</a></p>
+  <h2>📬 Get In Touch</h2>
+  <p class="contact-link">Instagram: <a href="https://instagram.com/yourrubikprofile" target="_blank">@yourrubikprofile</a></p>
+  <p class="contact-link">Email: <a href="mailto:rubiksrealm@example.com">rubiksrealm@example.com</a></p>
 </section>
 
 <footer>
-  <p>© 2025 Speedcubing World. Built with ❤️ + JavaScript + magnets.</p>
-  <p><small>Not affiliated with WCA. For fan use only.</small></p>
+  <p>© 2025 Rubik’s Realm – Designed using cube colors, powered by passion 💛❤️💙💚🧡</p>
 </footer>
 
 </body>
